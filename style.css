@@ -1,0 +1,1063 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    
+}
+
+#logo a{
+    text-decoration: none;
+    background-color: inherit;
+    color: white;
+}
+
+
+/********** Modal Bienvenida **********/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/***** Modal Content *****/
+.modal-content {
+    background: linear-gradient(200deg, rgba(101, 244, 154, 0.6), rgba(62, 190, 158, 0.6), rgba(48, 58, 202, 0.6));
+    margin: 150px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 30%;
+}
+
+
+.modal-content p{
+    text-align: center;
+    margin-top: 10px;
+    color:white;
+    font-size: 20px;
+}
+
+/***** The Close Button *****/
+.close {
+    text-align: right;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*************** Secciones de la Página (Header, Home, S1, S2, S3, S4 ,S5) ***************/
+
+/****** Header Nav ******/
+
+.nav {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(200deg, rgb(101, 244, 154), rgb(62, 190, 158), rgb(48, 58, 202));
+    text-shadow: 10px 10px #0000;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    z-index: 3;
+    
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+    
+}
+
+.nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+
+/************ Home Page ************/
+
+.dadContainer{
+    max-width: 100vw;
+    max-height: 100vh;
+    width:100%;
+    height:100vh;
+    box-sizing: border-box;
+}
+
+#contenedorSections{
+    width: 100%;
+    display: flex;
+    max-height: 500px;
+    height:500px;
+}
+
+#navSections{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/****** Section 1 - Formulario ******/
+
+#section1{
+    height: 100%;
+}
+
+#formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:stretch;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+#columna1{
+    height: 100%;
+    padding: 10px;
+    box-shadow: 3px 3px 6px 6px rgba(209,194,194,0.49);
+    -webkit-box-shadow: 3px 3px 6px 6px rgba(209,194,194,0.49);
+    -moz-box-shadow: 3px 3px 6px 6px rgba(209,194,194,0.49);
+    border-radius: 10px;
+}
+
+#formDatosPersona{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+#divPrincipal, #divSecundario{
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(15, 15, 15);
+    color: white;
+}
+
+#divPrincipal h2, #divSecundario h2{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#divSecundario{
+    margin-top: 20%;
+}
+
+.barra-progreso{
+    margin-bottom: 10%;
+}
+
+.barra-progreso p{
+    color: white;
+    text-shadow: 3px 3px 10px rgb(15, 15, 15);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.progress{
+    box-shadow: 3px 3px 10px 10px rgba(209, 194, 194, 0.651);
+}
+
+#contenedorPacientes h3, #mensajeResultadoConsulta{
+    text-align: center;
+    margin-top: 10%;
+    text-shadow: 2px 2px 4px rgb(15, 15, 15);
+    color: white;
+}
+
+#contenedorPacientes{
+    width: 100%;
+    height: 100%;
+}
+
+#contenedorPacientes h4{
+    font-size: 20px;
+    text-align: start;
+}
+
+#inputApellidoContainer{
+    margin-top: 10%;
+}
+
+
+.modal-profesionales.antropo{
+    height:250px;
+    width: 500px;
+}
+
+.modal-profesionales.antropo p{
+    text-align:center;
+}
+
+.step button{
+    margin-top: 20%;
+    width: 40%;
+    
+}
+
+.prev-btn{
+    margin-right:15%;
+}
+
+#profesionales{
+    margin-top: 5%;
+}
+
+input[type=text], [type=number], select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+button {
+    background-color: rgb(62, 190, 158);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+    width:100%;
+}
+
+#inputFecha, #inputEmail{
+    margin-top: 5%;
+}
+
+#inputEnviar{
+    background-color: rgb(101, 244, 154);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+    width:100%;
+}
+
+#btnSolicitarTurno, #btnConsultarTurno{
+    width:40%;
+    margin-top: 10%;
+}
+
+#btnEnviarConsultaTurno{
+    margin-top: 10%;
+}
+
+
+#btnPyA{
+    margin-top:10%;
+}
+
+input:focus, select:focus, textarea:focus{
+    background-color: rgb(101, 244, 154);
+    font-weight: bold;
+}
+
+button:hover, #btnSolicitarTurno:hover{
+    background-color: #5d9472;
+    box-shadow: 3px 3px 2px rgba(101, 244, 154, 1);
+}
+
+.step{
+    display:none;
+}
+
+.step.active{
+    display:block;
+}
+
+.form-group{
+    width:100%;
+}
+
+.form-group input{
+    width:100%;
+    border:1.5px solid grey;
+    padding:5px;
+    font-size:18px;
+    margin-top:5px;
+    border-radius: 0px;
+}
+
+.parrafosIndicativos, label{
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgb(7, 7, 7);
+}
+
+li{
+    list-style: none;
+}
+
+
+/****** Section 2 - Carrousel ******/
+
+#section2{
+    height: 100%;
+}
+
+.carrousel{
+    display: flex;
+    position: relative;
+}
+
+#contenedorCarrousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section2 img{
+    height: 550px;
+}
+
+.slideButtons{
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+}
+
+.slideButtons:hover{
+    background-color:rgba(112, 189, 159, 0.4);
+    width:10%;
+    box-shadow:none;
+}
+.carrouselIndicators:hover{
+    background-color:rgba(112, 189, 159, 0.8);    
+    box-shadow: none;
+}
+
+.row>*{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.swal-button{
+    background-color: rgb(62, 190, 158);
+}
+
+.swal-button:hover{
+    background-color: #5d9472;
+}
+
+.swal-modal{
+    background: linear-gradient(200deg, rgba(101, 244, 154, 0.6), rgba(62, 190, 158, 0.6), rgba(48, 58, 202, 0.6));
+}
+
+.swal-title, .swal-text {
+    color: white;
+}
+
+.swal-icon--success::before, .swal-icon--success::after, .swal-icon--success__hide-corners{
+    background-color:inherit;
+}
+
+
+/********** Sección 3 "Cartilla de Profesionales" **********/
+#section3{
+    display:none;
+    max-height: 600px;
+    max-width: 100vw;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+/****** Slider ******/
+
+.slider {
+    background: white;
+    -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 500px;
+    margin: 5% auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.slider::before, .slider::after {
+    background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 500px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    margin-top:2%;
+    -webkit-animation: scroll 30s linear infinite;
+            animation: scroll 30s linear infinite;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(250px * 24);
+}
+
+.btn-primary{
+    background-color: rgb(62, 190, 158);
+    border: none;
+    float:right;
+}
+
+.btn-primary:hover{
+    background-color: #5d9472;
+    box-shadow: 3px 3px 2px rgba(101, 244, 154, 1);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+#section3 .card{
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 10%;
+}
+
+#section3 .card h6, #section3 .card p{
+    color:grey;
+}
+
+
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgProfesionales {
+    max-height: 300px;
+    max-width: 100vw;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 12));
+              transform: translateX(calc(-250px * 12));
+    }
+    
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 12));
+              transform: translateX(calc(-250px * 12));
+    }
+}
+
+
+/****** infoProfesionales modal ******/
+
+.modal-profesionales {
+    width: 50%;
+    height: 50%;
+}
+
+
+.modal-profesionales h6{
+    text-align:center;
+    margin-top: 10px;
+    color:white;
+    font-size: 24px;
+    border-bottom: 2px solid white;
+}
+
+.modal-profesionales p{
+    text-align: left;
+    font-size: 18px;
+    display: block;
+}
+
+.close-profesionales {
+    font-size: 24px;
+}
+
+
+/********** Sección 4 "Contacto" **********/
+#section4{
+    display:none;
+    max-height: 900px;
+    max-width: 100vw;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-image: url("contacUs_bcImg.jpg");
+    background-color: transparent;
+}
+
+#section4 i{
+    margin-right: 10px;
+}
+
+#section4 h3, #section3 h3, #section5 h3{
+    margin-top: 4%;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 22px;
+}
+
+#section4 form{
+    box-shadow: 3px 3px 6px 6px rgb(209 194 194 / 49%);
+    border-radius: 10px;
+    margin-bottom: 5% ;
+    background-color:rgba(255, 255, 255, 0.5);
+    width: 80%;
+    
+}
+
+#section4 textarea{
+    width: 60%;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+#section4 input{
+    padding: 5px;
+    border-radius: 5px;
+    width:55%;
+}
+
+#btnContacto{
+    background-color: rgb(62, 190, 158);  
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+    width:100%;
+    margin-bottom: 5%;
+}
+
+#btnContacto:hover{
+    background-color: #5d9466;
+}
+
+#section4 textarea{
+    margin: 4%;
+}
+
+#contactoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+}
+
+/***** Loader POST datos Contacto *****/
+.loader{
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #34dba3;
+    width: 120px;
+    height: 120px;
+
+    -webkit-animation: spin 1s linear 2;
+    animation: spin 1s linear 2;
+    z-index: 10;
+}
+
+.respuesta{
+    height: 200px;
+    padding-bottom: 30px;
+}
+
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/********** Sección 5 "Sobre nosotros" **********/
+
+#section5{
+    display:none;
+    height: 3100px;
+    max-width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#section5 h3{
+    margin-top: 4%;
+    width: 100%;
+}
+
+/****** Effects Section 5 ******/
+.scroll-container {
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#section5 img{
+    height:75vh;
+    width:48vw;
+    border-radius: 5%;
+}
+
+#section5 p {
+    height:75vh;
+    width: 46vw;
+    padding: 150px;
+    text-align: center;
+    background: linear-gradient(200deg, rgba(101, 244, 154, 0.6), rgba(62, 190, 158, 0.6), rgba(48, 58, 202, 0.6));
+    border-radius: 5%;
+    color: white;
+}
+
+.scroll-element,
+.scroll-caption {
+    width: 50%;
+}
+
+.scroll-element {
+    min-height: 300px;
+    max-height: 525px;
+    height: 100%;
+    border-radius: 5%;
+    margin-left: 10px;
+    box-shadow: 3px 3px 3px 4px rgb(209 194 194 / 49%);
+}
+
+.scroll-element.img{
+    width: 80%;
+    background-color: inherit;
+    
+}
+
+.scroll-caption {
+    margin: 1rem;
+}
+
+/****** Media Query Section 5 - Max-Width 850px ******/
+@media screen and (max-width: 850px) {
+    #section5{
+        display:none;
+        height: 3600px;
+        width: 100vw;
+    }
+
+
+    .scroll-container,
+    .scroll-container:nth-of-type(even) {
+        flex-direction: column;
+        align-content: inherit;
+    }
+
+    .scroll-container{
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 700px;
+        max-height: 700px;
+        height: 100%;
+    }
+
+    .scroll-element {
+        max-height: 300px;
+        height: 100%;
+        margin-left: 0px;
+    }
+
+    .scroll-element,
+    .scroll-caption {
+        width: 100%;
+    }
+
+    .scroll-element.p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .scroll-element.img{
+        width:100%;
+    }
+
+    #section5 img{
+        height:50vh;
+        width:100%;
+        
+    }
+    
+    #section5 p {
+        padding: 100px;
+        width: 100%;
+        margin-top: 10%;
+    }
+}
+
+
+/******************** Media's Queries ********************/
+
+/****** Media Query General  ******/
+@media(max-width:900px){
+    .modal-content {
+        margin-top:auto;
+        margin-left: auto;
+        width: 60%;
+        height: 30%;
+    }
+
+    #section4 form{
+        width: 90%;
+        
+    }
+
+    .modal-content p{
+        text-align: center;
+        margin: auto;
+        color:white;
+        font-size: 20px;
+    }
+
+    #principalContainer{
+        flex-direction: column-reverse;
+        max-width: 100vw;
+        width: 100%;
+    }
+
+    #section1{
+        position: relative;
+        max-width: 960px;
+        max-height: 700px;   
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    #columna1{
+        box-sizing: border-box; 
+        height:100%;
+    }
+
+    #divSecundario{
+        margin-top:10%;
+    }
+
+    #btnSolicitarTurno, #btnConsultarTurno{
+        margin-top:5%;
+    }
+
+    #section2{
+        position: relative;
+        width:100%;
+        height: 100%;
+        max-width: 960px;
+        max-height: 700px;
+        z-index:-10;
+    }
+
+    #carouselExampleIndicators{
+        max-width: 960px;
+        max-height: 700px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #section2 img{
+        height: 400px;
+        width: 100%;
+    }
+
+    .row>*{
+        max-width: 100vw;
+        width: 100vw;
+    }
+
+    .container{
+        margin:auto;
+        
+    }
+
+    footer{
+        --bs-gutter-x: 0;
+    }
+}
+
+/****** Media Query General ******/
+@media(max-width:860px){
+    .slider .slide-track{
+        -webkit-animation: scroll 30s linear infinite;
+                animation: scroll 30s linear infinite;
+    }
+    @-webkit-keyframes scroll {
+        0% {
+            -webkit-transform: translateX(400px);
+                    transform: translateX(400px);
+        }
+        100% {
+          -webkit-transform: translateX(calc(-210px * 14));
+                  transform: translateX(calc(-210px * 14));
+        }
+        
+    }
+    
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(400px);
+                    transform: translateX(400px);
+        }
+        100% {
+          -webkit-transform: translateX(calc(-210px * 14));
+                  transform: translateX(calc(-210px * 14));
+        }
+    }
+}
+
+/****** Media Query Header Nav ******/
+@media (max-width:800px) {
+    .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    }
+    .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 100px;
+    left: 0px;
+    }
+
+    .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    }
+
+    .nav > .nav-links > a:hover{
+    background-color: rgba(101, 244, 154, 1);
+    color: white;
+    }
+}
+
+/****** Media Query Section 3 Slider  ******/
+@media (min-width: 768px) {
+    #section3 .carousel-inner {
+    display: flex;
+    }
+    #section3 .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+    }
+}
+
+/****** Media Query Section 1 y 3 - Modals ******/
+@media (max-width: 768px){
+    .swal-modal, .modal-content.modal-profesionales{
+        height: 40%;
+        width: 80%;
+    }
+}
+
+/****** Media Query Section 5 - Max-Width 600px ******/
+@media screen and (max-width:600px){
+    #section5 img{
+        height:100%;
+        width:100%;
+        
+    }
+    
+    #section5 p {
+        padding: 70px 30px;
+        width: 100%;
+        
+    }
+}
+
+/**Styling scrollable elements*/
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+    opacity: 1;
+}
+
+
+.scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+}
+
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

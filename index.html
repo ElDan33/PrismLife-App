@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web\css\all.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>PrismLife</title>
+</head>
+<body>
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>¡Bienvenido/a a PrismLife!</p>
+        </div>
+    </div>
+
+    <div id="modalLoader" class="modal">
+        <div class="loader"></div>
+    </div>
+
+    <div id="modalRespuestaContacto" class="modal">
+        <!-- Modal content -->
+            <div class="modal-content respuesta">
+                <span class="close">&times;</span>
+                <p>¡Su consulta ha sido enviada con éxito!</p>
+                <p>En breve nos contactaremos contigo.</p>
+            </div>
+    </div>
+    
+    <div class="container dadContainer">
+    <!--------- NavBar ---------->
+    <div id="navContainer"class="row">
+        <div class="col-sm-12">
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+            <div id="logo" class="nav-title">
+                <a href="#logo">
+                    <i class="fas fa-gem me-3"></i>PrismLife
+                </a>
+                
+            </div>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+          
+          <div class="nav-links">
+            <a id="cartillaNavLink" href="#section3">Cartilla de profesionales</a>
+            <a id="sobreNosotrosNavLink" href="#section5">Sobre nosotros</a>
+            <a id="contactoNavLink" href="#section4">Contacto</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="principalContainer" class="row">
+      <div class="col-sm-4">
+        <!------ Section 1 - Form ------>
+      <section id="section1">
+        <div id="formContainer" visibility="visible">
+            <div id="columna1">
+                <form action="" id="formDatosPersona" method="post">
+                    <div class="step step-1 active">
+                        <div class="form-grup">
+                            <!-- Fist Step - Solicitud de turno y consulta de turno -->
+                            <div id="divPrincipal">
+                                <h2>¿Deseas solicitar turno?</h2>
+                                <button type="button" id="btnSolicitarTurno" class="next-btn">CLICK AQUÍ</button>
+                            </div>
+                            <div id="divSecundario">
+                                <h2>¿Ya tienes turno?</h2>
+                                <button type="button" id="btnConsultarTurno">CONSULTAR</button>
+                            </div>
+                            <div id="contenedorInputsConsulta" hidden="true">
+                                <div id="inputsConsulta">
+                                    <div id="inputNombreContainer">
+                                        <label for="">Ingresa tu Nombre:</label>
+                                        <input type="text" name="Nombre" id="inputConsultaNombre"
+                                            placeholder="Tu Nombre..." required>
+                                    </div>
+                                    <div id="inputApellidoContainer">
+                                        <label for="">Ingresa tu Apellido:</label>
+                                        <input type="text" name="Apellido" id="inputConsultaApellido"
+                                            placeholder="Tu Apellido..." required>
+                                    </div>
+                                </div>
+                                <button type="button" class="prev-btn" id="btnEnviarConsultaTurnoPrev">ANTERIOR</button>
+                                <button type="button" id="btnEnviarConsultaTurno">ENVIAR</button>
+                            </div>
+                            <div id="mensajeResultadoConsulta" hidden="true">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------ Second Step - Inputs Nombre y Apellido ------>
+                    <div class="step step-2">
+                        <div class="barra-progreso">
+                            <p>Formulario: Progreso</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="Nombre" id="inputNombre" class="inputsNyA conjuntoInputs"
+                                placeholder="Nombre..." min-length="3" required>
+
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" name="Apellido" id="inputApellido" class="inputsNyA conjuntoInputs"
+                                placeholder="Apellido..." min-length="3" required>
+                        </div>
+                        <button type="button" class="prev-btn hiddenBtn" id="btnNyAPrev"
+                            >ANTERIOR</button>
+                        <button type="button" class="next-btn hiddenBtn" id="btnNyA"
+                            >SIGUIENTE</button>
+                    </div>
+
+                    <!------ Third Step - Inputs Edad y Sexo ------>
+                    <div class="step step-3">
+                        <div class="barra-progreso">
+                            <p>Formulario: Progreso</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="edad">Edad:</label>
+                            <input type="number" name="Edad" id="inputEdad" class="conjuntoInputs"
+                                placeholder="Edad..." required>
+
+                            <label for="sexo">Sexo:</label>
+                            <select name="Sexo" id="inputSexo" class="conjuntoInputs" required>
+                                <option value="Elige una opción...">Elige una opción...</option>
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                            </select>
+                        </div>
+                        <button type="button" class="prev-btn hiddenBtn" id="btnEySPrev"
+                            >ANTERIOR</button>
+                        <button type="button" class="next-btn hiddenBtn" id="btnEyS"
+                            >SIGUIENTE</button>
+                    </div>
+
+                    <!------ Fourth Step - Inputs Peso y Altura ------>
+                    <div class="step step-4">
+                        <div class="barra-progreso">
+                            <p>Formulario: Progreso</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="containerDatosAntropometricos">
+                                <label for="peso">Peso:</label>
+                                <input type="number" name="Peso" id="inputPeso" step="0.01"
+                                    class="conjuntoInputs antropoInputs" placeholder="Peso..." required>
+                                <label for="altura">Altura:</label>
+                                <input type="number" name="Altura" id="inputAltura" step="0.01"
+                                    class="conjuntoInputs antropoInputs" placeholder="Altura..." required>
+                            </div>
+                        </div>
+                        <button type="button" class="prev-btn hiddenBtn" id="btnPyAPrev"
+                            >ANTERIOR</button>
+                        <button type="button" class="next-btn hiddenBtn " id="btnPyA"
+                            >SIGUIENTE</button>
+                    </div>
+
+                    <!------ Fifth Step - Inputs Especialidades y Profesionales ------>
+                    <div class="step step-5">
+                        <div class="barra-progreso">
+                            <p>Formulario: Progreso</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="especialidad">
+                                <p class="parrafosIndicativos">Elija una especialidad</p>
+                                <select name="Especialidad" id="inputEspecialidad">
+                                    <option value="Elige una opción..." class="opciónDefault">Elige una opcion...
+                                    </option>
+                                    <option value="Nutrición Basada en Plantas">Nutrición Basada en Plantas</option>
+                                    <option value="Nutrición Deportiva">Nutrición Deportva</option>
+                                    <option value="Nutrición para el Embarazo">Nutrición para el Embarazo</option>
+                                    <option value="Nutrición Infantil">Nutricion Infantil</option>
+                                    <option value="Nutrición para el Adulto Mayor">Nutrición en el Audulto Mayor
+                                    </option>
+                                    <option value="Nutrición Normal">Nutrición Normal</option>
+                                </select>
+                            </div>
+
+                            <div id="profesionales" hidden="true">
+                                <p class="parrafosIndicativos">Elija un profesional</p>
+                                <select name="Profesionales" id="inputProfesionales">
+                                    <option value="Elige una opción..." class="opcionDefault">Elige una opcion...
+                                    </option>
+                                    <option id="opcionProfesionales1"></option>
+                                    <option id="opcionProfesionales2"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="prev-btn hiddenBtn" id="btnEyPPrev"
+                            >ANTERIOR</button>
+                        <button type="button" class="next-btn hiddenBtn" id="btnEyP"
+                            >SIGUIENTE</button>
+                    </div>
+
+                    <!------ Sixth Step - Inputs Fecha de turno y Email ------>
+                    <div class="step step-6">
+                        <div class="barra-progreso">
+                            <p>Formulario: Progreso</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="turnosContainer" hidden="true">
+                                <label for="fecha" class="parrafosIndicativos">Turnos disponibles:</label>
+                                <input type="datetime-local" name="Fecha" id="inputFecha" class="conjuntoInputs"
+                                    required>
+                                <label for="email">E-Mail:</label>
+                                <input type="email" name="Email" id="inputEmail" placeholder="Correo electrónico"
+                                    required>
+                            </div>
+                            <button type="button" class="prev-btn hiddenBtn" id="btnFyEmPrev"
+                            >ANTERIOR</button>
+                            <button type="button" class="next-btn hiddenBtn" id="btnFyEm"
+                                >ENVIAR</button>
+                        </div>
+                    </div>
+
+                    <!------ Seventh Step - Confirmación de turno exitoso y recordatorio ------>
+                    <div class="step step-7">
+                        <div class="form-group" id="contenedorPacientesBtn">
+                            <div id="contenedorPacientes">
+                                <h3>En breve recibirá un correo electrónico con la confirmación del turno</h3>
+                            </div>
+                            <button type="button" id="btnEnviar" >CONFIRMAR</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="col-sm-8">
+    <!------ Section 2 - Carrousel de imágenes ------>
+    <section id="section2">
+        <div id="carouselExampleIndicators" class="carousel slide carrousel" data-bs-ride="carousel">
+            <div class="carousel-indicators" id="contenedorCarrousel">
+                <div id="indicadoresCarrousel">
+                    <!------ Carrousel Buttons Slides 1-5 ------>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="carrouselIndicators active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        class="carrouselIndicators" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    class="carrouselIndicators" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    class="carrouselIndicators" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    class="carrouselIndicators" aria-label="Slide 5"></button>
+                </div>
+            </div>
+        <!------ Carrousel Images ------>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn.pixabay.com/photo/2015/06/02/20/58/little-girl-running-795505_960_720.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/29/09/49/woman-1868817_960_720.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/06/12/52/woman-2592247_960_720.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2021/02/1140-multigenerational-black-family-esp.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.istockphoto.com/photos/senior-couple-walking-in-a-forest-picture-id1184577150?k=20&m=1184577150&s=612x612&w=0&h=REU51cfXmcfqkFMyDqeK9QXIMcXIGqZlATfAO6PGaAk="
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+
+            <!------ Carrousel Buttons Next and Previous ------>
+            <button class="carousel-control-prev slideButtons" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next slideButtons" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    </div>
+    <div class="col-12" id="navSections">
+        <section id="section3">
+            <h3>CARTILLA DE PROFESIONALES</h3>
+            <div class="slider">
+                <div class="slide-track">
+
+                    <!----- 1st Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/7752805/pexels-photo-7752805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Esteban Casinelli</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn1" id="cardBtn1">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 2nd Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Jorge Díaz</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn2" id="cardBtn2">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 3rd Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Carolina Dominich</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn3" id="cardBtn3">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 4th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/7793131/pexels-photo-7793131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Marianela Gonzalez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn4" id="cardBtn4">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!----- 5th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Constanza Gutierrez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn5" id="cardBtn5">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 6th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/8190818/pexels-photo-8190818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Julieta Mariani</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn6" id="cardBtn6">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 7th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/5876513/pexels-photo-5876513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Fabricio Ordoñez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn7" id="cardBtn7">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 8th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3974762/pexels-photo-3974762.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Bernardo Pedernera</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn8" id="cardBtn8">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 9th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Martina Peralta</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn9" id="cardBtn9">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 10th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3765120/pexels-photo-3765120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Ornella Peretti</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn10" id="cardBtn10">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 11th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3777946/pexels-photo-3777946.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" id="img1" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Diego Ramirez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn11" id="cardBtn11">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 12th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/8317652/pexels-photo-8317652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Pilar Veccio</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn12" id="cardBtn12">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!----- 13th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/7752805/pexels-photo-7752805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Esteban Casinelli</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn1" id="cardBtn1">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 14th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Jorge Díaz</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn2" id="cardBtn2">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 15th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Carolina Dominich</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn3" id="cardBtn3">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 16th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/7793131/pexels-photo-7793131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Marianela Gonzalez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn4" id="cardBtn4">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!----- 17th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Constanza Gutierrez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn5" id="cardBtn5">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 18th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/8190818/pexels-photo-8190818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Julieta Mariani</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn6" id="cardBtn6">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 19th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/5876513/pexels-photo-5876513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Fabricio Ordoñez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn7" id="cardBtn7">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 20th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3974762/pexels-photo-3974762.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Bernardo Pedernera</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn8" id="cardBtn8">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 21th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Martina Peralta</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn9" id="cardBtn9">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 22th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3765120/pexels-photo-3765120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Ornella Peretti</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn10" id="cardBtn10">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 23th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/3777946/pexels-photo-3777946.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" id="img1" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Diego Ramirez</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn11" id="cardBtn11">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----- 24th Slider ----->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="https://images.pexels.com/photos/8317652/pexels-photo-8317652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100 imgProfesionales" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Lic. Pilar Veccio</h6>
+                                <hr>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary cardBtn12" id="cardBtn12">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <section id="section4">
+            <div id="contactoContainer">
+                <h3>Contáctanos</h3>
+                <form action="" class="" id="formContacto">
+                    <label for="">Nombre:</label>
+                    <i class="fa-solid fa-user"></i><input type="text"  class="inputContacto" id="inputNombreContacto"placeholder="Nombre..." required>
+                    <label for="">Apellido:</label>
+                    <i class="fa-solid fa-user"></i><input type="text" class="inputContacto" id="inputApellidoContacto" placeholder="Apellido..." required>
+                    <label for="">Correo electrónico:</label>
+                    <i class="fa-solid fa-envelope"></i><input type="email" name="" class="inputContacto" id="inputEmailContacto" placeholder="Email..." required>
+                    <label for="">Teléfono:</label>
+                    <i class="fa-solid fa-phone"></i><input type="number" name="" class="inputContacto" id="inputTelefonoContacto" placeholder="Teléfono..." required>
+                    <textarea name="" id="textAreaContacto" cols="40" rows="7" placeholder="Su consulta..." required></textarea>
+                    <input type="submit" value="Enviar" id="btnContacto">
+                </form>
+                
+            </div>
+        </section>
+
+        <section id="section5">
+            <h3>Sobre Nosotros</h3>
+            <section class="scroll-container">
+                <div class="scroll-element img js-scroll slide-left">
+                    <img id ="sectionImg1"src="https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    
+                </div>
+
+                <div class="scroll-element p js-scroll slide-right">
+                    <p>
+                        PrismLife nace como un proyecto enfocado en mejorar la calidad de vida 
+                        de las personas basado en 3 pilares fundamentales:<br> 
+                        1- Alimentacion consciente, equilibrada y variada. <br>
+                        2- Hábitos de vida saludable. <br>
+                        3- Vida Plena. 
+                    </p>
+                    
+                </div>
+
+                <div class="scroll-caption">
+                    
+                </div>
+            </section>
+
+            <section class="scroll-container">
+                <div class="scroll-element img js-scroll slide-right">
+                    <img src="https://images.pexels.com/photos/1292720/pexels-photo-1292720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </div>
+
+                <div class="scroll-element p js-scroll slide-left">
+                    <p>
+                        Ser pleno implica una vida equilibrada, donde se tiene control de las emociones
+                        sin importar las circunstancias. Parte de ello es la alimentación, y es 
+                        importante entender que buena parte de nuestra relación con los alimentos está 
+                        vinculado a nuestras emociones.
+                    </p>
+                </div>
+
+                <div class="scroll-caption">
+                    
+                </div>
+            </section>
+
+            <section class="scroll-container">
+                <div class="scroll-element img js-scroll slide-left">
+                    <img src="https://images.pexels.com/photos/1153369/pexels-photo-1153369.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </div>
+
+                <div class="scroll-element p js-scroll slide-right">
+                    <p>
+                        Algunos consejos para tener una vida plena son: <br>
+                        1- Disfrutar y valorar cada momento como único y especial. <br>
+                        2- Sacar tiempo para ti y hacer actividades de tu interés. <br>
+                        3- Cuidar la salud física y mental. <br>
+                        4- Comer saludable y ejercitarse. <br>
+                        5- No atarse a ideales preconcebidos, crear ideales propios. <br>
+                        6- Disfrutar cada instante de tu vida.
+                    </p>
+                </div>
+
+                <div class="scroll-caption">
+                    
+                </div>
+            </section>
+
+            <section class="scroll-container">
+                <div class="scroll-element img js-scroll slide-right">
+                    <img src="https://images.pexels.com/photos/4473611/pexels-photo-4473611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </div>
+
+                <div class="scroll-element p js-scroll slide-left">
+                    <p>
+                        Como parte de nuestro enfoque, abogamos por acompañar a las 
+                        familias en todo momento de su ciclo vital, desde el embarazo, 
+                        acompañando a la mujer madre, y a la familia, en todo el proceso, 
+                        y continuando con el seguimiento del crecimiento y desarrollo 
+                        del niño.
+                    </p>
+                </div>
+
+                <div class="scroll-caption">
+                    
+                </div>
+            </section>
+
+            <section class="scroll-container">
+                <div class="scroll-element img js-scroll slide-left">
+                    <img src="https://images.pexels.com/photos/7869515/pexels-photo-7869515.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                </div>
+
+                <div class="scroll-element p js-scroll slide-right">
+                    <p>
+                        Y no solamente durante las primeras etapas del ciclo vital, 
+                        nuestro compromiso con la familia es a lo largo de todo el 
+                        recorrido de su vida, hasta la edad adulta y la vejez. 
+                        Siempre fomentando una vida activa, la cual permite autonomía, 
+                        prolongando la misma con mejor calidad.
+                    </p>
+                </div>
+
+                <div class="scroll-caption">
+                    
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+    <!------- Footer ------->
+    <div id="footerContainer" class="row">
+      <div class="col-sm-12">
+        <footer class="text-center text-lg-start bg-light text-muted">
+          <!------ Section: Social media ------>
+          <section class="d-flex justify-content-center justify-content-lg-center p-4 border-bottom">
+              <!------ Left ------>
+              <div class="me-5 d-none d-lg-block">
+                  <span>Encuentranos en nuestras redes:</span>
+              </div>
+              <!------ Left ------>
+
+              <!------ Right ------>
+              <div>
+                  <a href="" class="me-4 text-reset">
+                      <i class="fab fa-facebook-square"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                      <i class="fab fa-google"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
+              <!------ Right ------>
+          </section>
+          <!-- Section: Social media -->
+
+          <!------ Section: Links  ------>
+          <section class="">
+              <div class="container text-center text-md-start mt-2">
+                  <!------ Grid row ------>
+                  <div class="row mt-3">
+                      <!------ Grid column ------>
+                      <div class="col-md-1 col-lg-2 col-xl-2 mx-auto mb-4">
+                          <!------ Content ------>
+                          <h6 class="text-uppercase fw-bold mb-4">
+                              <i class="fas fa-gem me-3"></i>Prism Life
+                          </h6>
+                          <p>
+                              Hábitos de vida saludable.
+                              Vida plena.
+                              Alimentación consciente.
+                          </p>
+                      </div>
+                      <!------ Grid column ------>
+
+                      <!------ Grid column ------>
+                      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                          <!------ Links ------>
+                          <h6 class="text-uppercase fw-bold mb-4">
+                              Contacto
+                          </h6>
+                          <p><i class="fas fa-home me-3"></i> Av. Siempre Viva 1122, Springfield, CA, US</p>
+                          <p>
+                              <i class="fas fa-envelope me-3"></i>
+                              prismlife@consultas.com
+                          </p>
+                          <p><i class="fas fa-phone me-3"></i> + 01 234 567 8899</p>
+                      </div>
+                      <!------ Grid column ------>
+                  </div>
+                  <!------ Grid row ------>
+              </div>
+          </section>
+          <!------ Section: Links  ------>
+
+          <!------ Copyright ------>
+          <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+              © 2021 Copyright:
+              <a class="text-reset fw-bold" href="#logo">PRISMLIFE</a>
+          </div>
+          <!------ Copyright ------>
+      </footer>
+      <!------ Footer ------>
+      </div>
+    </div>
+  </div>
+
+  
+    
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://kit.fontawesome.com/599f41a257.js" crossorigin="anonymous"></script>
+    <script src="Proyecto_Final_Carrizo_Dante.js" type="module"></script>
+</body>
+</html>
